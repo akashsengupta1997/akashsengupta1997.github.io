@@ -26,12 +26,16 @@
               </p>
               <p>
                 My research interests lie in 3D reconstruction of complex, dynamic objects - such as humans.
-                I am also broadly interested in probabilistic machine learning and generative modelling. I work towards adapting such methods to 3D reconstruction from 2D observations,
-                which is a fundamentally ill-posed problem, thus motivating a probabilistic approach.
+                I am also broadly interested in probabilistic machine learning and generative modelling, and work towards adapting models from these fields to 3D reconstruction
+                from 2D observations. This is a fundamentally ill-posed problem, thus motivating a probabilistic approach.
               </p>
               <p>
                 Prior to my PhD, I obtained an MEng in Information Engineering from the University of Cambridge.
-                </p>
+                As a student, I have interned at <a href="https://cambridgequantum.com">Cambridge Quantum</a> under the guidance of
+                <a href="https://www.cl.cam.ac.uk/~sjh227/">Dr. Steven Herbert</a>,
+                and at the <a href="https://www.microsoft.com/en-us/research/lab/mixed-reality-ai-lab-cambridge/"> Microsoft Mixed Reality & AI Lab</a>, where I was supervised by
+                <a href="https://pashminacameron.github.io/about/"> Dr. Pashmina Cameron </a>
+                and <a href="https://sadegh-aa.github.io">Dr. Sadegh Aliakbarian </a>.
               </p>
               <p style="text-align:center">
                 <a href="mailto:as2562@cam.ac.uk">Email</a> &nbsp/&nbsp
@@ -71,9 +75,33 @@
               <a href="https://github.com/akashsengupta1997/HierarchicalProbabilistic3DHuman">Code</a>
               <br>
               <p>
-              3D human pose and shape estimation from a single image is an ambiguous problem, since multiple 3D solutions can explain an observed 2D image.
-                This work estimates a hierarchical matrix-Fisher probability distribution over body pose, which allows us to sample any number of
+                3D human pose and shape estimation from a single image is an ambiguous problem, since multiple 3D solutions can explain an observed 2D image.
+                This work estimates a hierarchical matrix-Fisher probability distribution over body pose (i.e. rotations in SO(3)), which allows us to sample any number of
                 plausible 3D solutions conditioned on the observed image, and quantify body-part-specific prediction uncertainty.
+              </p>
+            </td>
+          </tr>
+
+          <tr onmouseout="nightsight_stop()" onmouseover="nightsight_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <img src="images/bmvc2021.gif" alt="bmvc2021gif" style="border-style: none" width="240">
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+                <papertitle>Probabilistic Estimation of 3D Human Shape and Pose with a Semantic Local Parametric Model.</papertitle>
+              <br>
+              <strong>Akash Sengupta</strong>,
+              <a href="http://mi.eng.cam.ac.uk/~ib255/">Ignas Budvytis</a>,
+              <a href="https://mi.eng.cam.ac.uk/~cipolla/">Roberto Cipolla</a>
+              <br>
+              <em>BMVC 2021</em>
+              <br>
+              <a href="https://arxiv.org/abs/2111.15404">Paper</a>
+              <br>
+              <p>
+                Body shape parameters in widely-used body models control global deformations over the whole body surface. Predicting probability distributions
+                over such <em> global </em> shape parameters does not meaningful capture <em> local </em> and <em> directional </em> shape prediction uncertainty,
+                e.g. due to camera angles or local occlusions. In this work, we present a simple mapping from local body measurements to global shape parameters,
+                and use this to lift distributions over measurements to locally-uncertain distributions over body shape.
               </p>
             </td>
           </tr>
@@ -96,28 +124,10 @@
               <a href="data/cvpr2021_poster.pdf">Poster</a>
               <br>
               <p>
-
-              </p>
-            </td>
-          </tr>
-
-          <tr onmouseout="nightsight_stop()" onmouseover="nightsight_start()">
-            <td style="padding:20px;width:25%;vertical-align:middle">
-              <img src="images/bmvc2021.gif" alt="bmvc2021gif" style="border-style: none" width="240">
-            </td>
-            <td style="padding:20px;width:75%;vertical-align:middle">
-                <papertitle>Probabilistic Estimation of 3D Human Shape and Pose with a Semantic Local Parametric Model.</papertitle>
-              <br>
-              <strong>Akash Sengupta</strong>,
-              <a href="http://mi.eng.cam.ac.uk/~ib255/">Ignas Budvytis</a>,
-              <a href="https://mi.eng.cam.ac.uk/~cipolla/">Roberto Cipolla</a>
-              <br>
-              <em>BMVC 2021</em>
-              <br>
-              <a href="https://arxiv.org/abs/2111.15404">Paper</a>
-              <br>
-              <p>
-
+                This work aims to estimate body shape from a set of multiple images of a subject, without constraints on body pose,
+                camera viewpoint, or background conditions between images. We demonstrate that previous approaches
+                result in inaccurate or inconsistent shape estimates. Our method predicts a distribution over
+                body shape parameters conditioned on each image, which are probabilistically combined to obtain a consistent multi-image shape estimate.
               </p>
             </td>
           </tr>
@@ -136,10 +146,15 @@
               <em>BMVC 2020</em>
               <br>
               <a href="https://arxiv.org/abs/2009.10013">Paper</a> &nbsp/&nbsp
-              <a href="https://github.com/akashsengupta1997/STRAPS-3DHumanShapePose">Code</a>
+              <a href="https://github.com/akashsengupta1997/STRAPS-3DHumanShapePose">Code</a> &nbsp/&nbsp
+              <a href="https://github.com/akashsengupta1997/SSP-3D">Data</a>
               <br>
               <p>
-
+                Monocular human pose and shape estimation methods often predict inaccurate body shapes, due to a scarcity of <em>in-the-wild</em> training data
+                with <em>diverse</em> and <em>accurate</em> body shape labels. This work proposes an on-the-fly synthetic data generation pipeline to mitigate data scarcity.
+                We bridge the gap between synthetic training inputs and noisy real inputs using data augmentation and corruption. Furthermore, we present a
+                challenging evaluation dataset for human shape estimation, SSP-3D, which consists of RGB images of tightly-clothed sports-persons with a variety of body shapes
+                paired with pseudo-ground-truth body shape and pose labels.
               </p>
             </td>
           </tr>
@@ -149,7 +164,10 @@
       </td>
     </tr>
   </table>
+
+  <br>
   Thanks to <a href="https://jonbarron.info/">Jon Barron</a> for the website template.
+
 </body>
 
 </html>
