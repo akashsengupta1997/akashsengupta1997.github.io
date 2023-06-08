@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html style="background-color:black; color:white;" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
   <title>Akash Sengupta</title>
   
@@ -58,7 +58,7 @@
               </p>
             </td>
             <td style="padding:2.5%;width:40%;max-width:40%">
-              <a href="images/akash.jpg"><img style="width:100%;max-width:100%" alt="profile photo" src="images/akash.jpg" class="hoverZoomLink"></a>
+              <a href="images/akash.png"><img style="width:60%;max-width:60%" alt="profile photo" src="images/akash.png" class="hoverZoomLink"></a>
             </td>
           </tr>
         </tbody></table>
@@ -66,18 +66,46 @@
 
         <h2>News</h2>
         <ul>
-          <li><b>February 2023</b>: HuManiFlow was accepted to CVPR 2023! Paper and code to be released.</li>
+          <li><b>February 2023</b>: HuManiFlow was accepted to CVPR 2023! Paper and code are now public - see below.</li>
         </ul>
 
         <h2>Research</h2>
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
-          <tr onmouseout="nightsight_stop()" onmouseover="nightsight_start()">
+          <tr>
+              <td style="padding:20px;width:25%;vertical-align:middle">
+<!--                <a href="images/cvpr2023.gif"><img src="images/cvpr2023.gif" alt="cvpr2023gif" style="border-style: none" width="300"></a>-->
+                <a href="images/cvpr2023.mp4"><video autoplay loop muted playsinline src="images/cvpr2023.mp4" style="border-style: none" width="300"></video></a>
+              </td>
+              <td style="padding:20px;width:75%;vertical-align:middle">
+                  <papertitle>HuManiFlow: Ancestor-Conditioned Normalising Flows on SO(3) Manifolds for Human Pose and Shape Distribution Estimation</papertitle>
+                <br>
+                <strong>Akash Sengupta</strong>,
+                <a href="http://mi.eng.cam.ac.uk/~ib255/">Ignas Budvytis</a>,
+                <a href="https://mi.eng.cam.ac.uk/~cipolla/">Roberto Cipolla</a>
+                <br>
+                <em>CVPR 2023</em>
+                <br>
+                <a href="https://arxiv.org/abs/2305.06968">Paper</a> &nbsp/&nbsp
+                <a href="https://www.youtube.com/watch?v=6xDiJNzPYNI">Video</a> &nbsp/&nbsp
+                <a href="data/cvpr2023_poster.pdf">Poster</a> &nbsp/&nbsp
+                <a href="https://github.com/akashsengupta1997/HuManiFlow">Code</a>
+                <br>
+                <p>
+                  Probabilistic approaches to 3D human pose and shape estimation exhibit a trade-off between:
+                  (i) 2D sample-input <em>consistency</em>, (ii) 3D sample <em>diversity</em> and (iii) distribution <em>accuracy</em>.
+                  We predict simultaneously consistent, diverse and accurate distributions by using normalising flows over SO(3), the Lie group of body part rotations,
+                  and by exploiting the human kinematic tree structure. This improves performance in downstream tasks.
+                </p>
+              </td>
+            </tr>
+
+          <tr>
             <td style="padding:20px;width:25%;vertical-align:middle">
-              <img src="images/iccv2021.gif" alt="iccv2021gif" style="border-style: none" width="240">
+              <a href="images/iccv2021.gif"><img src="images/iccv2021.gif" alt="iccv2021gif" style="border-style: none" width="320"></a>
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
-                <papertitle>Hierarchical Kinematic Probability Distributions for 3D Human Shape and Pose Estimation from Images in the Wild.</papertitle>
+                <papertitle>Hierarchical Kinematic Probability Distributions for 3D Human Shape and Pose Estimation from Images in the Wild</papertitle>
               <br>
               <strong>Akash Sengupta</strong>,
               <a href="http://mi.eng.cam.ac.uk/~ib255/">Ignas Budvytis</a>,
@@ -91,19 +119,19 @@
               <a href="https://github.com/akashsengupta1997/HierarchicalProbabilistic3DHuman">Code</a>
               <br>
               <p>
-                3D human pose and shape estimation from a single image is an ambiguous problem, since multiple 3D solutions can explain an observed 2D image.
-                This work estimates a hierarchical matrix-Fisher probability distribution over body pose (i.e. rotations in SO(3)), which allows us to sample any number of
-                plausible 3D solutions conditioned on the observed image, and quantify body-part-specific prediction uncertainty.
+                3D human pose and shape estimation from a single image is an ill-posed problem, since multiple 3D solutions can explain a 2D image.
+                Thus, we estimate a hierarchical matrix-Fisher probability distribution over body pose conditioned on the observed image.
+                This allows us to sample any number of plausible 3D solutions, and quantify body-part-specific prediction uncertainty.
               </p>
             </td>
           </tr>
 
-          <tr onmouseout="nightsight_stop()" onmouseover="nightsight_start()">
+          <tr>
             <td style="padding:20px;width:25%;vertical-align:middle">
-              <img src="images/bmvc2021.gif" alt="bmvc2021gif" style="border-style: none" width="240">
+              <a href="images/bmvc2021.gif"><img src="images/bmvc2021.gif" alt="bmvc2021gif" style="border-style: none" width="320"></a>
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
-                <papertitle>Probabilistic Estimation of 3D Human Shape and Pose with a Semantic Local Parametric Model.</papertitle>
+                <papertitle>Probabilistic Estimation of 3D Human Shape and Pose with a Semantic Local Parametric Model</papertitle>
               <br>
               <strong>Akash Sengupta</strong>,
               <a href="http://mi.eng.cam.ac.uk/~ib255/">Ignas Budvytis</a>,
@@ -114,20 +142,20 @@
               <a href="https://arxiv.org/abs/2111.15404">Paper</a>
               <br>
               <p>
-                Body shape parameters in widely-used body models control global deformations over the whole body surface. Predicting probability distributions
-                over such <em> global </em> shape parameters does not meaningful capture <em> local </em> and <em> directional </em> shape prediction uncertainty,
-                e.g. due to camera angles or local occlusions. In this work, we present a simple mapping from local body measurements to global shape parameters,
+                Shape parameters in widely-used body models control global deformations over the whole body surface. Predicting probability distributions
+                over <em> global </em> shape parameters does not meaningfully capture <em>local</em> and <em>directional</em> shape prediction uncertainty,
+                e.g. due to camera angles or local occlusions. We present a simple mapping from local body measurements to global shape parameters,
                 and use this to lift distributions over measurements to locally-uncertain distributions over body shape.
               </p>
             </td>
           </tr>
 
-          <tr onmouseout="nightsight_stop()" onmouseover="nightsight_start()">
+          <tr>
             <td style="padding:20px;width:25%;vertical-align:middle">
-              <img src="images/cvpr2021.gif" alt="cvpr2021gif" style="border-style: none" width="240">
+              <a href="images/cvpr2021.gif"><img src="images/cvpr2021.gif" alt="cvpr2021gif" style="border-style: none" width="320"></a>
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
-                <papertitle>Probabilistic 3D Human Shape and Pose Estimation from Multiple Unconstrained Images in the Wild.</papertitle>
+                <papertitle>Probabilistic 3D Human Shape and Pose Estimation from Multiple Unconstrained Images in the Wild</papertitle>
               <br>
               <strong>Akash Sengupta</strong>,
               <a href="http://mi.eng.cam.ac.uk/~ib255/">Ignas Budvytis</a>,
@@ -140,7 +168,7 @@
               <a href="data/cvpr2021_poster.pdf">Poster</a>
               <br>
               <p>
-                This work aims to estimate body shape from a set of multiple images of a subject, without constraints on body pose,
+                We aim to estimate body shape from a set of multiple images of a subject, without constraints on body pose,
                 camera viewpoint, or background conditions between images. We demonstrate that previous approaches
                 result in inaccurate or inconsistent shape estimates. Our method predicts a distribution over
                 body shape parameters conditioned on each image, which are probabilistically combined to obtain a consistent multi-image shape estimate.
@@ -148,12 +176,12 @@
             </td>
           </tr>
 
-          <tr onmouseout="nightsight_stop()" onmouseover="nightsight_start()">
+          <tr>
             <td style="padding:20px;width:25%;vertical-align:middle">
-              <img src="images/bmvc2020.jpg" alt="bmvc2020" style="border-style: none" width="240">
+              <img src="images/bmvc2020.jpg" alt="bmvc2020" style="border-style: none" width="300">
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
-                <papertitle>Synthetic Training for Accurate 3D Human Pose and Shape Estimation in the Wild.</papertitle>
+                <papertitle>Synthetic Training for Accurate 3D Human Pose and Shape Estimation in the Wild</papertitle>
               <br>
               <strong>Akash Sengupta</strong>,
               <a href="http://mi.eng.cam.ac.uk/~ib255/">Ignas Budvytis</a>,
@@ -166,11 +194,10 @@
               <a href="https://github.com/akashsengupta1997/SSP-3D">Data</a>
               <br>
               <p>
-                Monocular human pose and shape estimation methods often predict inaccurate body shapes, due to a scarcity of <em>in-the-wild</em> training data
-                with <em>diverse</em> and <em>accurate</em> body shape labels. This work proposes an on-the-fly synthetic data generation pipeline to mitigate data scarcity.
-                We bridge the gap between synthetic training inputs and noisy real inputs using data augmentation and corruption. Furthermore, we present a
-                challenging evaluation dataset for human shape estimation, SSP-3D, which consists of RGB images of tightly-clothed sports-persons with a variety of body shapes
-                paired with pseudo-ground-truth body shape and pose labels.
+                Deep-learning-based 3D human pose and shape estimators often predict inaccurate body shapes, due to a lack of <em>diverse</em> training data
+                with <em>accurate</em> shape labels. We propose an on-the-fly synthetic data pipeline to mitigate data scarcity.
+                In addition, we present an evaluation dataset for body shape estimation, SSP-3D, which consists of images of athletes
+                with a variety of body shapes paired with pseudo-ground-truth 3D shape and pose labels.
               </p>
             </td>
           </tr>
@@ -183,7 +210,6 @@
 
   <br>
   Thanks to <a href="https://jonbarron.info/">Jon Barron</a> for the website template.
-
 </body>
 
 </html>
